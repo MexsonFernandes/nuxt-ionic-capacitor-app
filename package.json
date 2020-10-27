@@ -7,9 +7,13 @@
     "build": "nuxt-ts build",
     "start": "nuxt-ts start",
     "generate": "nuxt-ts generate",
-    "test:e2e": "wdio wdio.conf.js"
+    "test:e2e": "wdio wdio.conf.js",
+    "resources": "cordova-res-generator -p android,ios && node resources/sync.js android"
   },
   "dependencies": {
+    "@capacitor/android": "2.4.2",
+    "@capacitor/cli": "^2.4.2",
+    "@capacitor/core": "^2.4.2",
     "@nuxt/content": "^1.9.0",
     "@nuxt/typescript-runtime": "^2.0.0",
     "@nuxtjs/axios": "^5.12.2",
@@ -26,6 +30,7 @@
     "@wdio/mocha-framework": "^6.5.0",
     "@wdio/spec-reporter": "^6.4.7",
     "@wdio/sync": "^6.5.0",
+    "cordova-res-generator": "^0.4.2",
     "eslint-config-prettier": "^6.12.0",
     "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-wdio": "^6.0.12",

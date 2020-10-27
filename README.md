@@ -11,3 +11,18 @@ A boilerplate code for starting cross platform apps developed using Nuxt.js and 
 * axios
 * bulma
 * content
+* Ionic
+
+## To-Do:
+- [ ] Ionic UI components
+- [ ] Electron support
+- [ ] Capacitor plugins
+- [ ] Cordova Resources(icon/splash)
+
+## Create resources
+
+* Add icon with size (1024x1024)px.
+* Add splash with size (2732x2732)px.
+* Run the generation command
+
+    `yarn resources`
