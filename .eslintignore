@@ -1,0 +1,14 @@
+# Common
+node_modules
+dist
+.nuxt
+coverage
+
+# Packages
+
+# vue-app
+package/
+electron/
+android/app
+
+static/sw.js

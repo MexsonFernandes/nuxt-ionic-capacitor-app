@@ -8,6 +8,7 @@
     "start": "nuxt-ts start",
     "generate": "nuxt-ts generate",
     "test:e2e": "wdio wdio.conf.js",
+    "lint": "eslint --ext .js,.mjs,.vue . --fix",
     "package:linux": "electron-packager electron/ nuxt-capacitor-app --platform linux --arch x64 --out package/ --overwrite",
     "deb64": "electron-installer-debian --src package/nuxt-capacitor-app-linux-x64 --dest package/installers/ --arch amd64",
     "package:window": "electron-packager electron/ app --platform win32 --arch x64 --out package/",
@@ -27,8 +28,10 @@
     "nuxt": "^2.14.6"
   },
   "devDependencies": {
+    "@ls-lint/ls-lint": "^1.9.2",
     "@nuxt/types": "^2.14.6",
     "@nuxt/typescript-build": "^2.0.3",
+    "@nuxtjs/eslint-config-typescript": "^4.0.0",
     "@wdio/cli": "^6.5.2",
     "@wdio/local-runner": "^6.5.2",
     "@wdio/mocha-framework": "^6.5.0",
@@ -37,6 +40,7 @@
     "cordova-res-generator": "^0.4.2",
     "electron-installer-debian": "^3.1.0",
     "electron-packager": "^15.1.0",
+    "eslint": "^7.12.1",
     "eslint-config-prettier": "^6.12.0",
     "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-wdio": "^6.0.12",

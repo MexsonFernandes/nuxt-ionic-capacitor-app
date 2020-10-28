@@ -1,5 +1,5 @@
-import { Plugins } from '@capacitor/core';
-const { Toast } = Plugins;
-import Vue from 'vue';
+import { Plugins } from '@capacitor/core'
+import Vue from 'vue'
+const { Toast } = Plugins
 
 Vue.use(Toast)
