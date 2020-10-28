@@ -15,9 +15,9 @@ A boilerplate code for starting cross platform apps developed using Nuxt.js and 
 
 ## To-Do:
 - [ ] Ionic UI components
-- [ ] Electron support
+- [x] Electron support
 - [ ] Capacitor plugins
-- [ ] Cordova Resources(icon/splash)
+- [x] Cordova Resources(icon/splash)
 
 ## Create resources
 
@@ -26,3 +26,17 @@ A boilerplate code for starting cross platform apps developed using Nuxt.js and 
 * Run the generation command
 
     `yarn resources`
+
+## Generate platform packages (Electron)
+
+`yarn package:<platform>`
+
+Eg. linux, windows
+
+Find deployment under `package/` folder.
+
+
+* Run following to create installer file.
+
+`yarn deb64`
+
