@@ -7,21 +7,21 @@
       </h1>
       <div class="links">
         <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
+          href="https://github.com/MexsonFernandes/nuxt-capacitor-app"
           target="_blank"
           rel="noopener noreferrer"
           class="button--grey"
-        >
-          GitHub
-        </a>
+        >GitHub Repo</a>
+      </div>
+
+      <h3 v-if="Boolean(networkStatus)" class="subtitle is-1">
+        You are currently <span :class="networkStatus == 'online'?'has-text-primary': 'has-text-danger'">{{ networkStatus }}</span>
+      </h3>
+
+      <div class="links">
+        <button class="button is-primary" @click="showToast">
+          Toast
+        </button>
       </div>
     </div>
   </div>
@@ -29,8 +29,32 @@
 
 <script lang="ts">
 import Vue from 'vue'
+import { Plugins } from '@capacitor/core'
 
-export default Vue.extend({})
+const { Toast, Network } = Plugins
+
+export default Vue.extend({
+  data: () => {
+    return {
+      networkStatus: ''
+    }
+  },
+  mounted () {
+    // check initial network and enable the listener for changes
+    this.checkNetwork()
+    Network.addListener('networkStatusChange', (status) => {
+      this.networkStatus = status.connected ? 'online' : 'offline'
+    })
+  },
+  methods: {
+    async checkNetwork () {
+      this.networkStatus = (await Network.getStatus()).connected ? 'online' : 'offline'
+    },
+    async showToast () {
+      await Toast.show({ text: 'I am a toast!' })
+    }
+  }
+})
 </script>
 
 <style>
@@ -44,16 +68,8 @@ export default Vue.extend({})
 }
 
 .title {
-  font-family:
-    'Quicksand',
-    'Source Sans Pro',
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    Roboto,
-    'Helvetica Neue',
-    Arial,
-    sans-serif;
+  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
+    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   display: block;
   font-weight: 300;
   font-size: 100px;

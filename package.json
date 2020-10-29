@@ -19,6 +19,7 @@
     "@capacitor/android": "2.4.2",
     "@capacitor/cli": "^2.4.2",
     "@capacitor/core": "^2.4.2",
+    "@ionic/pwa-elements": "^3.0.1",
     "@nuxt/content": "^1.9.0",
     "@nuxt/typescript-runtime": "^2.0.0",
     "@nuxtjs/axios": "^5.12.2",
