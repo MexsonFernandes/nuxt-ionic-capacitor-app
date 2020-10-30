@@ -11,14 +11,13 @@ A boilerplate code for starting cross platform apps developed using Nuxt.js and 
 
 ## Plugins available
 * axios
-* bulma
 * content
-* Ionic
+* ionic
 
 ## To-Do:
-- [ ] Ionic UI components
+- [x] Ionic UI components
 - [x] Electron support
-- [ ] Capacitor plugins
+- [x] Capacitor plugins
 - [x] Cordova Resources(icon/splash)
 
 ## Create resources
@@ -42,3 +41,6 @@ Find deployment under `package/` folder.
 
 `yarn deb64`
 
+
+## References:
+* https://github.com/daggerok/ionic-nuxt-app

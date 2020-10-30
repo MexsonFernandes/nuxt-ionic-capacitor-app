@@ -14,10 +14,19 @@ export default {
   },
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
-  css: [],
+  css: [
+    '../node_modules/@ionic/core/css/core.css',
+    '../node_modules/@ionic/core/css/normalize.css',
+    '../node_modules/@ionic/core/css/structure.css',
+    '../node_modules/@ionic/core/css/typography.css',
+    '../node_modules/@ionic/core/css/ionic.bundle.css'
+  ],
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
-  plugins: [{ src: '~/plugins/pwa-element.js', ssr: false }],
+  plugins: [
+    { src: '~/plugins/ionic.js', ssr: false },
+    { src: '~/plugins/ion-icons.js', ssr: false }
+  ],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
   components: true,
@@ -31,7 +40,7 @@ export default {
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [
     // https://go.nuxtjs.dev/bootstrap
-    '@nuxtjs/bulma',
+    // '@nuxtjs/bulma',
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
     // https://go.nuxtjs.dev/pwa

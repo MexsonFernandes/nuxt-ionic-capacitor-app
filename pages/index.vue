@@ -2,27 +2,35 @@
   <div class="container">
     <div>
       <Logo />
-      <h1 class="title">
-        nuxt-capacitor-app
-      </h1>
+      <h1 class="title">nuxt-capacitor-app</h1>
       <div class="links">
         <a
           href="https://github.com/MexsonFernandes/nuxt-capacitor-app"
           target="_blank"
           rel="noopener noreferrer"
-          class="button--grey"
-        >GitHub Repo</a>
+        >
+          <ion-button color="success">GitHub Repo</ion-button>
+        </a>
       </div>
 
       <h3 v-if="Boolean(networkStatus)" class="subtitle is-1">
-        You are currently <span :class="networkStatus == 'online'?'has-text-primary': 'has-text-danger'">{{ networkStatus }}</span>
+        You are currently
+        <ion-label :color="networkStatus == 'online'?'success': 'danger'">{{ networkStatus }}</ion-label>
       </h3>
 
       <div class="links">
-        <button class="button is-primary" @click="showToast">
+        <ion-button color="dark" @click="showToast">
           Toast
-        </button>
+        </ion-button>
+        <ion-button color="medium">
+          Secondary
+        </ion-button>
       </div>
+      <ion-fab slot="fixed" vertical="bottom" horizontal="end">
+        <ion-fab-button>
+          <alert-icon class="ion-text-white" />
+        </ion-fab-button>
+      </ion-fab>
     </div>
   </div>
 </template>
@@ -34,6 +42,7 @@ import { Plugins } from '@capacitor/core'
 const { Toast, Network } = Plugins
 
 export default Vue.extend({
+  components: {},
   data: () => {
     return {
       networkStatus: ''
@@ -48,7 +57,9 @@ export default Vue.extend({
   },
   methods: {
     async checkNetwork () {
-      this.networkStatus = (await Network.getStatus()).connected ? 'online' : 'offline'
+      this.networkStatus = (await Network.getStatus()).connected
+        ? 'online'
+        : 'offline'
     },
     async showToast () {
       await Toast.show({ text: 'I am a toast!' })
@@ -58,6 +69,7 @@ export default Vue.extend({
 </script>
 
 <style>
+
 .container {
   margin: 0 auto;
   min-height: 100vh;
