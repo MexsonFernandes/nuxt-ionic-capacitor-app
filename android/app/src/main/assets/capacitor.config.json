@@ -1,5 +1,5 @@
 {
-  "appId": "com.example.app",
+  "appId": "com.mexsonfernandes.nuxtcap",
   "appName": "nuxt-capacitor-app",
   "bundledWebRuntime": false,
   "npmClient": "yarn",
