@@ -62,6 +62,7 @@ export default Vue.extend({
         : 'offline'
     },
     async showToast () {
+      console.log('e')
       await Toast.show({ text: 'I am a toast!' })
     }
   }
