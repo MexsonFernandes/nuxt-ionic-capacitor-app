@@ -2,9 +2,7 @@
   <div class="container">
     <div>
       <Logo />
-      <h1 class="title">
-        nuxt-capacitor-app
-      </h1>
+      <h1 class="title">nuxt-capacitor-app</h1>
       <div class="links">
         <a
           href="https://github.com/MexsonFernandes/nuxt-capacitor-app"
@@ -17,18 +15,19 @@
 
       <h3 v-if="Boolean(networkStatus)" class="subtitle is-1">
         You are currently
-        <ion-label :color="networkStatus == 'online'?'success': 'danger'">
-          {{ networkStatus }}
-        </ion-label>
+        <ion-label :color="networkStatus == 'online' ? 'success' : 'danger'">{{
+          networkStatus
+        }}</ion-label>
       </h3>
 
       <div class="links">
-        <ion-button color="dark" @click="showToast">
-          Toast
-        </ion-button>
-        <ion-button v-if="$store.state.installAvailable" color="danger" @click="installApp">
-          Install App
-        </ion-button>
+        <ion-button color="dark" @click="showToast">Toast</ion-button>
+        <ion-button
+          v-if="$store.state.installAvailable"
+          color="danger"
+          @click="installApp"
+          >Install App</ion-button
+        >
       </div>
       <ion-fab slot="fixed" vertical="bottom" horizontal="end">
         <ion-fab-button>
@@ -40,7 +39,6 @@
 </template>
 
 <script>
-
 export default {
   components: {},
   data: () => {
@@ -48,7 +46,7 @@ export default {
       networkStatus: ''
     }
   },
-  mounted () {
+  mounted() {
     // check initial network and enable the listener for changes
     this.checkNetwork()
     this.$network.addListener('networkStatusChange', (status) => {
@@ -56,20 +54,19 @@ export default {
     })
   },
   methods: {
-    async checkNetwork () {
+    async checkNetwork() {
       this.networkStatus = (await this.$network.getStatus()).connected
         ? 'online'
         : 'offline'
     },
-    showToast () {
+    showToast() {
       this.$toast.show({ text: 'I am a toast!' })
-      // await Toast.show({ text: 'I am a toast!' })
     },
-    installApp () {
+    installApp() {
       // Show the install promp()
-      this.$store.state.deferred_prompt.prompt()
+      this.$store.state.deferredPrompt.prompt()
       // Wait for the user to respond to the prompt
-      this.$store.state.deferred_prompt.userChoice.then((choiceResult) => {
+      this.$store.state.deferredPrompt.userChoice.then((choiceResult) => {
         if (choiceResult.outcome === 'accepted') {
           this.$toast.info('Installation started!')
         } else {
@@ -82,7 +79,6 @@ export default {
 </script>
 
 <style>
-
 .container {
   margin: 0 auto;
   min-height: 100vh;

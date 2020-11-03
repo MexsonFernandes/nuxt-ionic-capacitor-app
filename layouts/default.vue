@@ -6,7 +6,7 @@
 
 <script>
 export default {
-  mounted () {
+  mounted() {
     if (process.browser) {
       window.addEventListener('beforeinstallprompt', (e) => {
         // Prevent the mini-infobar from appearing on mobile
