@@ -1,0 +1,13 @@
+{
+  "appId": "com.mexsonfernandes.nuxtcap",
+  "appName": "nuxt-capacitor-app",
+  "bundledWebRuntime": false,
+  "npmClient": "yarn",
+  "webDir": "dist",
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 0
+    }
+  },
+  "cordova": {}
+}
