@@ -2,6 +2,8 @@
   "name": "nuxt-capacitor-app",
   "version": "1.0.0",
   "private": true,
+  "author": "Mexson Fernandes",
+  "description": "A boilerplate of Nuxt, Ionic and Capacitor app.",
   "scripts": {
     "dev": "nuxt-ts",
     "build": "nuxt-ts build",
@@ -26,6 +28,7 @@
     "@nuxt/content": "^1.9.0",
     "@nuxt/typescript-runtime": "^2.0.0",
     "@nuxtjs/axios": "^5.12.2",
+    "@nuxtjs/pwa": "^3.2.2",
     "core-js": "^3.6.5",
     "nuxt": "^2.14.6",
     "vue-ionicons": "^3.0.5"
