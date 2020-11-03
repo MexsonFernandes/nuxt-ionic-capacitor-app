@@ -1,4 +1,3 @@
-
 import config from '../nuxt.config'
 
 export const state = () => ({
