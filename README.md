@@ -2,7 +2,7 @@
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https%3A%2F%2Fgithub.com%2FMexsonFernandes%2Fnuxt-capacitor-app)
 
-A boilerplate code for starting cross platform apps developed using Nuxt.js and Capacitor.js cross platform framework.
+A template code for starting cross platform apps developed using Nuxt.js and Capacitor.js cross platform framework.
 
 ## Platform supported
 * Web Browser (Tested on Chrome, Firefox, Brave, Edge)

@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "author": "Mexson Fernandes",
-  "description": "A boilerplate of Nuxt, Ionic and Capacitor app.",
+  "description": "A template of Nuxt, Ionic and Capacitor cross-platform app.",
   "scripts": {
     "dev": "nuxt-ts",
     "build": "nuxt-ts build",
