@@ -10,19 +10,19 @@ export default {
     if (process.browser) {
       window.addEventListener('beforeinstallprompt', (e) => {
         // Prevent the mini-infobar from appearing on mobile
-        e.preventDefault();
+        e.preventDefault()
         // Stash the event so it can be triggered later.
-        this.$store.commit('createDeferredPrompt', e);
+        this.$store.commit('createDeferredPrompt', e)
         // Update UI notify the user they can install the PWA
-        this.$store.commit('checkInstallAvailable', true);
-      });
+        this.$store.commit('checkInstallAvailable', true)
+      })
       window.addEventListener('appinstalled', () => {
-        this.$store.commit('checkInstallAvailable', false);
-        this.$toast.success('App is installed!');
-      });
+        this.$store.commit('checkInstallAvailable', false)
+        this.$toast.success('App is installed!')
+      })
     }
-  },
-};
+  }
+}
 </script>
 
 <style>

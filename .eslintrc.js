@@ -10,6 +10,7 @@ module.exports = {
   },
   plugins: ['vue'],
   rules: {
-    'no-console': 2
+    'no-console': 2,
+    'space-before-function-paren': 2
   }
 }

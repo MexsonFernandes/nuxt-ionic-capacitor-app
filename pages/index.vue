@@ -44,39 +44,39 @@ export default {
   components: {},
   data: () => {
     return {
-      networkStatus: '',
-    };
+      networkStatus: ''
+    }
   },
   mounted() {
     // check initial network and enable the listener for changes
-    this.checkNetwork();
+    this.checkNetwork()
     this.$network.addListener('networkStatusChange', (status) => {
-      this.networkStatus = status.connected ? 'online' : 'offline';
-    });
+      this.networkStatus = status.connected ? 'online' : 'offline'
+    })
   },
   methods: {
     async checkNetwork() {
       this.networkStatus = (await this.$network.getStatus()).connected
         ? 'online'
-        : 'offline';
+        : 'offline'
     },
     showToast() {
-      this.$toast.show({ text: 'I am a toast!' });
+      this.$toast.show({ text: 'I am a toast!' })
     },
     installApp() {
       // Show the install promp()
-      this.$store.state.deferredPrompt.prompt();
+      this.$store.state.deferredPrompt.prompt()
       // Wait for the user to respond to the prompt
       this.$store.state.deferredPrompt.userChoice.then((choiceResult) => {
         if (choiceResult.outcome === 'accepted') {
-          this.$toast.info('Installation started!');
+          this.$toast.info('Installation started!')
         } else {
-          this.$toast.error('Installation canceled!');
+          this.$toast.error('Installation canceled!')
         }
-      });
-    },
-  },
-};
+      })
+    }
+  }
+}
 </script>
 
 <style>
