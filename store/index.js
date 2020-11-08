@@ -10,7 +10,6 @@ export const state = () => ({
 export const mutations = {
   checkInstallAvailable (state, value) {
     state.installAvailable = value
-    console.log('df')
   },
 
   createDeferredPrompt (state, value) {

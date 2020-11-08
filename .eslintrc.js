@@ -10,6 +10,6 @@ module.exports = {
   },
   plugins: ['vue'],
   rules: {
-    'no-console': 1
+    'no-console': 2
   }
 }
