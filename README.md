@@ -4,6 +4,12 @@
 
 A template code for starting cross platform apps developed using Nuxt.js and Capacitor.js cross platform framework.
 
+## Features
+
+- Documentation module
+- Install app using custom button
+- SEO support
+
 ## Platform supported
 
 - Web Browser (Tested on Chrome, Firefox, Brave, Edge)

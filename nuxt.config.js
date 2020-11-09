@@ -11,7 +11,12 @@ export default {
         name: 'viewport',
         content: 'width=device-width, initial-scale=1'
       },
-      { hid: 'description', name: 'description', content: '' }
+      {
+        hid: 'description',
+        name: 'description',
+        content:
+          'A Nuxt Capacitor with Ionic template for any cross platform applications.'
+      }
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
   },
@@ -48,7 +53,9 @@ export default {
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
     // https://go.nuxtjs.dev/content
-    '@nuxt/content'
+    '@nuxt/content',
+    '@nuxtjs/robots',
+    '@nuxtjs/sitemap'
   ],
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
@@ -74,5 +81,25 @@ export default {
       lang: 'en',
       useWebmanifestExtension: false
     }
+  },
+  robots: {
+    Sitemap: process.env.SITE_URL + 'sitemap.xml'
+  },
+  sitemap: {
+    hostname: process.env.SITE_URL,
+    filter ({ routes }) {
+      return routes.map((route) => {
+        route.url = `${route.url}/`
+        return route
+      })
+    },
+    routes: [
+      {
+        url: '/',
+        changefreq: 'weekly',
+        priority: 1,
+        lastmod: new Date().toISOString()
+      }
+    ]
   }
 }
