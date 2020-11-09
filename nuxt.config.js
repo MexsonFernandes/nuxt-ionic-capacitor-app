@@ -101,5 +101,8 @@ export default {
         lastmod: new Date().toISOString()
       }
     ]
+  },
+  generate: {
+    fallback: true
   }
 }
