@@ -1,9 +1,10 @@
 # Nuxt.js + Capacitor.js + Ionic.js Template
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https%3A%2F%2Fgithub.com%2FMexsonFernandes%2Fnuxt-capacitor-app)
 [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FMexsonFernandes%2Fnuxt-capacitor-app&count_bg=%231F83DB&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=visitor+count&edge_flat=false)](https://hits.seeyoufarm.com)
 
 A template code for starting cross platform apps developed using Nuxt.js and Capacitor.js cross platform framework.
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https%3A%2F%2Fgithub.com%2FMexsonFernandes%2Fnuxt-capacitor-app)
 
 ## Features
 
