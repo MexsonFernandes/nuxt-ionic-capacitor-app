@@ -8,11 +8,11 @@ export const state = () => ({
 })
 
 export const mutations = {
-  checkInstallAvailable (state, value) {
+  checkInstallAvailable(state, value) {
     state.installAvailable = value
   },
 
-  createDeferredPrompt (state, value) {
+  createDeferredPrompt(state, value) {
     state.deferredPrompt = value
   }
 }

@@ -1,41 +1,56 @@
 <template>
-  <div class="container">
-    <div>
-      <Logo />
-      <h1 class="title">nuxt-capacitor-app</h1>
-      <div class="links">
-        <a
-          href="https://github.com/MexsonFernandes/nuxt-capacitor-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <ion-button color="success">GitHub Repo</ion-button>
-        </a>
-      </div>
+  <div>
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>Nuxt Ionic Capacitor Template</ion-title>
+      </ion-toolbar>
+    </ion-header>
 
-      <h3 v-if="Boolean(networkStatus)" class="subtitle is-1">
-        You are currently
-        <ion-label :color="networkStatus == 'online' ? 'success' : 'danger'">{{
-          networkStatus
-        }}</ion-label>
-      </h3>
+    <ion-card>
+      <ion-card-header center>
+        <ion-card-subtitle>starter</ion-card-subtitle>
+        <ion-card-title>Nuxt Logo</ion-card-title>
+        <Logo />
+      </ion-card-header>
 
-      <div class="links">
-        <ion-button color="dark" @click="showToast">Toast</ion-button>
-        <ion-button
-          v-if="$store.state.installAvailable"
-          color="danger"
-          @click="installApp"
-        >
-          Install App</ion-button
-        >
-      </div>
-      <ion-fab slot="fixed" vertical="bottom" horizontal="end">
-        <ion-fab-button>
-          <alert-icon class="ion-text-white" />
-        </ion-fab-button>
-      </ion-fab>
-    </div>
+      <ion-card-content>
+        <h3 v-if="Boolean(networkStatus)" class="subtitle is-1">
+          You are currently
+          <ion-label
+            :color="networkStatus == 'online' ? 'success' : 'danger'"
+            >{{ networkStatus }}</ion-label
+          >
+        </h3>
+        Keep close to Nature's heart... and break clear away, once in awhile,
+        and climb a mountain or spend a week in the woods. Wash your spirit
+        clean.
+      </ion-card-content>
+    </ion-card>
+    <ion-card>
+      <ion-item
+        href="https://github.com/MexsonFernandes/nuxt-capacitor-app"
+        class="ion-activated"
+      >
+        <ion-icon name="wifi" slot="start"></ion-icon>
+        <ion-label>GitHub Repo</ion-label>
+      </ion-item>
+
+      <ion-item @click="showToast">
+        <ion-icon name="wine" slot="start"></ion-icon>
+        <ion-label>Toast</ion-label>
+      </ion-item>
+
+      <ion-item v-if="$store.state.installAvailable" @click="installApp">
+        <ion-icon name="wine" slot="start"></ion-icon>
+        <ion-label>Install App</ion-label>
+      </ion-item>
+    </ion-card>
+
+    <ion-fab vertical="bottom" color="danger" horizontal="end" slot="fixed">
+      <ion-fab-button>
+        <alert-icon class="ion-text-white" style="font-size: 1.5em" />
+      </ion-fab-button>
+    </ion-fab>
   </div>
 </template>
 
@@ -78,36 +93,3 @@ export default {
   }
 }
 </script>
-
-<style>
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
-}
-</style>

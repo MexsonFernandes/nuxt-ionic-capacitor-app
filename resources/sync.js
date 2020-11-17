@@ -145,7 +145,7 @@ const ANDROID_SPLASHES = [
   }
 ]
 
-function copyImages (sourcePath, targetPath, images) {
+function copyImages(sourcePath, targetPath, images) {
   for (const icon of images) {
     const source = sourcePath + icon.source
     const target = targetPath + icon.target
@@ -153,8 +153,6 @@ function copyImages (sourcePath, targetPath, images) {
       if (err) {
         throw err
       }
-      // eslint-disable-next-line no-console
-      console.log(`${source} >> ${target}`)
     })
   }
 }

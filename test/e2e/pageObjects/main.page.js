@@ -1,5 +1,5 @@
 class Page {
-  open (path = '/') {
+  open(path = '/') {
     // eslint-disable-next-line no-undef
     browser.url(path)
   }

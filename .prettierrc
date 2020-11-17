@@ -4,5 +4,6 @@
   "tabWidth": 2,
   "arrowParens": "always",
   "singleQuote": true,
-  "formatOnType": true
+  "formatOnType": true,
+  "endOfLine": "crlf"
 }

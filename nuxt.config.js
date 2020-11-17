@@ -41,10 +41,7 @@ export default {
   components: true,
 
   // Modules for dev and build (recommended) (https://go.nuxtjs.dev/config-modules)
-  buildModules: [
-    // https://go.nuxtjs.dev/typescript
-    '@nuxt/typescript-build'
-  ],
+  buildModules: [],
 
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [
@@ -87,7 +84,7 @@ export default {
   },
   sitemap: {
     hostname: process.env.SITE_URL,
-    filter ({ routes }) {
+    filter({ routes }) {
       return routes.map((route) => {
         route.url = `${route.url}/`
         return route
