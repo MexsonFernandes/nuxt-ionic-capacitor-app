@@ -56,3 +56,4 @@ Find deployment under `package/` folder.
 ## References:
 
 - https://github.com/daggerok/ionic-nuxt-app
+- [ion icons in Nuxt project](https://yasminzy.com/nuxt/ionicons/)

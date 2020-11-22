@@ -18,22 +18,31 @@ export default {
           'A Nuxt Capacitor with Ionic template for any cross platform applications.'
       }
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    script: [
+      {
+        type: 'module',
+        src: 'https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.esm.js'
+      },
+      {
+        nomodule: '',
+        src: 'https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.js'
+      }
+    ]
   },
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
   css: [
-    '../node_modules/@ionic/core/css/core.css',
-    '../node_modules/@ionic/core/css/normalize.css',
-    '../node_modules/@ionic/core/css/structure.css',
-    '../node_modules/@ionic/core/css/typography.css',
-    '../node_modules/@ionic/core/css/ionic.bundle.css'
+    '@/node_modules/@ionic/core/css/core.css',
+    '@/node_modules/@ionic/core/css/normalize.css',
+    '@/node_modules/@ionic/core/css/structure.css',
+    '@/node_modules/@ionic/core/css/typography.css',
+    '@/node_modules/@ionic/core/css/ionic.bundle.css'
   ],
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   plugins: [
     { src: '~/plugins/ionic.js', ssr: false },
-    { src: '~/plugins/ion-icons.js', ssr: false },
     { src: '~/plugins/capacitor.js', ssr: false }
   ],
 

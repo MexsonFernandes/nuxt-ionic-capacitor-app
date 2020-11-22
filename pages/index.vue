@@ -31,24 +31,25 @@
         href="https://github.com/MexsonFernandes/nuxt-capacitor-app"
         class="ion-activated"
       >
-        <ion-icon name="wifi" slot="start"></ion-icon>
+        <ion-icon slot="start" name="wifi"></ion-icon>
         <ion-label>GitHub Repo</ion-label>
       </ion-item>
 
       <ion-item @click="showToast">
-        <ion-icon name="wine" slot="start"></ion-icon>
+        <ion-icon slot="start" name="wine"></ion-icon>
         <ion-label>Toast</ion-label>
       </ion-item>
 
       <ion-item v-if="$store.state.installAvailable" @click="installApp">
-        <ion-icon name="wine" slot="start"></ion-icon>
+        <ion-icon slot="start" name="wine"></ion-icon>
         <ion-label>Install App</ion-label>
       </ion-item>
     </ion-card>
 
-    <ion-fab vertical="bottom" color="danger" horizontal="end" slot="fixed">
+    <ion-fab slot="fixed" vertical="bottom" color="danger" horizontal="end">
       <ion-fab-button>
-        <alert-icon class="ion-text-white" style="font-size: 1.5em" />
+        <!-- <alert-icon class="ion-text-white" style="font-size: 1.5em" /> -->
+        <ion-icon name="add"></ion-icon>
       </ion-fab-button>
     </ion-fab>
   </div>
