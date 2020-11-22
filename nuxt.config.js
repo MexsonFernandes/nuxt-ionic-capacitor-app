@@ -77,6 +77,9 @@ export default {
       short_name: 'Nuxt App',
       lang: 'en',
       useWebmanifestExtension: false
+    },
+    meta: {
+      theme_color: '#00FF00'
     }
   },
   robots: {
