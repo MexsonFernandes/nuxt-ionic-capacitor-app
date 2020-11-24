@@ -18,13 +18,7 @@ A template code for starting cross platform apps developed using Nuxt.js and Cap
 - Android
 - PWA (Tested on Chrome, Brave, Edge)
 
-## Plugins available
-
-- @nuxt/axios
-- @nuxt/content
-- @ionic/core
-
-## To-Do:
+## To-Do
 
 - [x] Ionic UI components
 - [x] Electron support
@@ -53,7 +47,7 @@ Find deployment under `package/` folder.
 
 `yarn deb64`
 
-## References:
+## References
 
 - https://github.com/daggerok/ionic-nuxt-app
 - [ion icons in Nuxt project](https://yasminzy.com/nuxt/ionicons/)
