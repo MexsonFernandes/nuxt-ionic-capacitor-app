@@ -48,7 +48,6 @@
 
     <ion-fab slot="fixed" vertical="bottom" color="danger" horizontal="end">
       <ion-fab-button>
-        <!-- <alert-icon class="ion-text-white" style="font-size: 1.5em" /> -->
         <ion-icon name="add"></ion-icon>
       </ion-fab-button>
     </ion-fab>
