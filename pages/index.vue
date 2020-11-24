@@ -10,6 +10,7 @@
       <ion-card-header center>
         <ion-card-subtitle>starter</ion-card-subtitle>
         <ion-card-title>Nuxt Logo</ion-card-title>
+        <Logo />
       </ion-card-header>
 
       <ion-card-content>
