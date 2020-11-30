@@ -84,9 +84,9 @@ export default {
       // Wait for the user to respond to the prompt
       this.$store.state.deferredPrompt.userChoice.then((choiceResult) => {
         if (choiceResult.outcome === 'accepted') {
-          this.$toast.info('Installation started!')
+          this.$toast.show('Installation started!')
         } else {
-          this.$toast.error('Installation canceled!')
+          this.$toast.show('Installation canceled!')
         }
       })
     }

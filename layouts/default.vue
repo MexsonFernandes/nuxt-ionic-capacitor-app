@@ -22,7 +22,7 @@ export default {
       // eslint-disable-next-line nuxt/no-globals-in-created
       window.addEventListener('appinstalled', () => {
         this.$store.commit('checkInstallAvailable', false)
-        this.$toast.success('App is installed!')
+        this.$toast.show('App is installed!')
       })
     }
   }
