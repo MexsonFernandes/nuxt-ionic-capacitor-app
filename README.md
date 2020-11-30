@@ -24,7 +24,7 @@ A template code for starting cross platform apps developed using Nuxt.js and Cap
 - [x] Electron support
 - [x] Capacitor plugins
 - [x] Cordova Resources(icon/splash)
-- [ ] App installation Button
+- [x] App installation Button
 - [ ] App updates UI
 
 ## Create resources

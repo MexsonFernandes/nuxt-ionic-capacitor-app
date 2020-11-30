@@ -9,12 +9,9 @@
 <script>
 export default {
   created() {
-    alert('eres')
     if (process.browser) {
-      alert('here')
       // eslint-disable-next-line nuxt/no-globals-in-created
       window.addEventListener('beforeinstallprompt', (e) => {
-        alert('ere')
         // Prevent the mini-infobar from appearing on mobile
         e.preventDefault()
         // Stash the event so it can be triggered later.

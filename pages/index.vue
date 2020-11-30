@@ -41,7 +41,7 @@
       </ion-item>
 
       <ion-item v-if="$store.state.installAvailable" @click="installApp">
-        <ion-icon slot="start" name="wine"></ion-icon>
+        <ion-icon slot="start" name="download"></ion-icon>
         <ion-label>Install App</ion-label>
       </ion-item>
     </ion-card>
@@ -93,3 +93,9 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+ion-item {
+  cursor: pointer;
+}
+</style>
