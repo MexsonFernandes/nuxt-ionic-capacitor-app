@@ -90,12 +90,6 @@ export default {
   sitemap: {
     hostname: process.env.SITE_URL,
     trailingSlash: true,
-    filter({ routes }) {
-      return routes.map((route) => {
-        route.url = `${route.url}/`
-        return route
-      })
-    },
     routes: [
       {
         url: '/',
