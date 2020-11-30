@@ -8,10 +8,13 @@
 
 <script>
 export default {
-  mounted() {
-    // eslint-disable-next-line nuxt/no-env-in-hooks
-    if (process.client) {
+  created() {
+    alert('eres')
+    if (process.browser) {
+      alert('here')
+      // eslint-disable-next-line nuxt/no-globals-in-created
       window.addEventListener('beforeinstallprompt', (e) => {
+        alert('ere')
         // Prevent the mini-infobar from appearing on mobile
         e.preventDefault()
         // Stash the event so it can be triggered later.
@@ -19,6 +22,7 @@ export default {
         // Update UI notify the user they can install the PWA
         this.$store.commit('checkInstallAvailable', true)
       })
+      // eslint-disable-next-line nuxt/no-globals-in-created
       window.addEventListener('appinstalled', () => {
         this.$store.commit('checkInstallAvailable', false)
         this.$toast.success('App is installed!')
