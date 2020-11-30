@@ -9,7 +9,8 @@
 <script>
 export default {
   mounted() {
-    if (process.browser) {
+    // eslint-disable-next-line nuxt/no-env-in-hooks
+    if (process.client) {
       window.addEventListener('beforeinstallprompt', (e) => {
         // Prevent the mini-infobar from appearing on mobile
         e.preventDefault()
