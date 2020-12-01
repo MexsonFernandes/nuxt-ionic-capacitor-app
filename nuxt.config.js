@@ -23,12 +23,10 @@ export default {
     script: [
       {
         type: 'module',
-        async: 'true',
         src: 'https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.esm.js'
       },
       {
         nomodule: '',
-        async: 'true',
         src: 'https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.js'
       }
     ]
