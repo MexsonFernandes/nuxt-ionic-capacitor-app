@@ -77,7 +77,7 @@ export default {
       short_name: 'Nuxt App',
       lang: 'en',
       useWebmanifestExtension: false,
-      start_url: ''
+      start_url: '/'
     },
     meta: {
       theme_color: '#00FF00'
