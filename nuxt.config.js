@@ -16,20 +16,20 @@ export default {
         hid: 'description',
         name: 'description',
         content:
-          'A Nuxt Capacitor with Ionic template for any cross platform applications.'
+          'A Nuxt Capacitor with Ionic boilerplate for any cross platform applications.'
       }
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
-    script: [
-      {
-        type: 'module',
-        src: 'https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.esm.js'
-      },
-      {
-        nomodule: '',
-        src: 'https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.js'
-      }
-    ]
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
+    // script: [
+    //   {
+    //     type: 'module',
+    //     src: 'https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.esm.js'
+    //   },
+    //   {
+    //     nomodule: '',
+    //     src: 'https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.js'
+    //   }
+    // ]
   },
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
@@ -42,16 +42,13 @@ export default {
   ],
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
-  plugins: [
-    { src: '~/plugins/ionic.js', ssr: false },
-    { src: '~/plugins/capacitor.js', ssr: false }
-  ],
+  plugins: [{ src: '~/plugins/ionic.js' }, { src: '~/plugins/capacitor.js' }],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
   components: true,
 
   // Modules for dev and build (recommended) (https://go.nuxtjs.dev/config-modules)
-  buildModules: [],
+  buildModules: ['@nuxtjs/eslint-module'],
 
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [

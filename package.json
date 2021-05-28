@@ -26,15 +26,16 @@
     "@ionic/core": "^5.4.1",
     "@ionic/pwa-elements": "^3.0.1",
     "@ionic/vue": "^5.4.1",
-    "@nuxtjs/eslint-config": "^5.0.0",
-    "@nuxtjs/eslint-module": "^3.0.1",
     "@nuxtjs/pwa": "^3.2.2",
     "@nuxtjs/robots": "^2.4.2",
     "@nuxtjs/sitemap": "^2.4.0",
     "core-js": "^3.6.5",
-    "nuxt": "^2.14.6"
+    "nuxt": "^2.15.4"
   },
   "devDependencies": {
+    "@nuxtjs/eslint-config": "^6.0.0",
+    "@nuxtjs/eslint-module": "^3.0.2",
+    "babel-eslint": "^10.1.0",
     "cordova-res-generator": "^0.4.2",
     "electron-installer-debian": "^3.1.0",
     "electron-packager": "^15.1.0",
@@ -43,6 +44,7 @@
     "eslint-plugin-nuxt": "^1.0.0",
     "eslint-plugin-prettier": "^3.1.4",
     "husky": "^4.3.0",
+    "ionicons": "^5.1.2",
     "prettier": "^2.1.2",
     "pretty-quick": "^3.1.0",
     "remark-footnotes": "2"

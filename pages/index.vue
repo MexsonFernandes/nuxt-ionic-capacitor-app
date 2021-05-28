@@ -21,7 +21,7 @@
             >{{ networkStatus }}</ion-label
           >
         </h3>
-        Keep close to Nature's heart... and break clear away, once in awhile,
+        Keep close to Nature's heart... and break clear away, once in a while,
         and climb a mountain or spend a week in the woods. Wash your spirit
         clean.
       </ion-card-content>
@@ -31,35 +31,43 @@
         href="https://github.com/MexsonFernandes/nuxt-capacitor-app"
         class="ion-activated"
       >
-        <ion-icon slot="start" name="wifi"></ion-icon>
+        <ion-icon slot="start" :src="i.wifi"></ion-icon>
         <ion-label>GitHub Repo</ion-label>
       </ion-item>
 
       <ion-item @click="showToast">
-        <ion-icon slot="start" name="wine"></ion-icon>
+        <ion-icon slot="start" :src="i.wine"></ion-icon>
         <ion-label>Toast</ion-label>
       </ion-item>
 
       <ion-item v-if="$store.state.installAvailable" @click="installApp">
-        <ion-icon slot="start" name="download"></ion-icon>
+        <ion-icon slot="start" :src="i.download"></ion-icon>
         <ion-label>Install App</ion-label>
       </ion-item>
     </ion-card>
 
     <ion-fab slot="fixed" vertical="bottom" color="danger" horizontal="end">
       <ion-fab-button>
-        <ion-icon name="add"></ion-icon>
+        <ion-icon :src="i.add"></ion-icon>
       </ion-fab-button>
     </ion-fab>
   </div>
 </template>
 
 <script>
+import { wifi, wine, download, add } from 'ionicons/icons'
+
 export default {
   components: {},
   data: () => {
     return {
-      networkStatus: ''
+      networkStatus: '',
+      i: {
+        wifi,
+        wine,
+        download,
+        add
+      }
     }
   },
   mounted() {
