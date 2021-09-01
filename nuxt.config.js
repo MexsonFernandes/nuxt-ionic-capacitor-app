@@ -1,7 +1,17 @@
 export default {
+  /*
+   ** Nuxt rendering mode
+   ** See https://nuxtjs.org/api/configuration-mode
+   */
   ssr: false,
+
   // Target (https://go.nuxtjs.dev/config-target)
   target: 'static',
+
+  /*
+   ** Base dir
+   */
+  srcDir: 'web',
 
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
@@ -20,29 +30,18 @@ export default {
       }
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
-    // script: [
-    //   {
-    //     type: 'module',
-    //     src: 'https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.esm.js'
-    //   },
-    //   {
-    //     nomodule: '',
-    //     src: 'https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.js'
-    //   }
-    // ]
   },
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
   css: [
-    '@/node_modules/@ionic/core/css/core.css',
-    '@/node_modules/@ionic/core/css/normalize.css',
-    '@/node_modules/@ionic/core/css/structure.css',
-    '@/node_modules/@ionic/core/css/typography.css',
-    '@/node_modules/@ionic/core/css/ionic.bundle.css'
+    '@ionic/vue/css/core.css',
+    '@ionic/vue/css/normalize.css',
+    '@ionic/vue/css/structure.css',
+    '@ionic/vue/css/typography.css'
   ],
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
-  plugins: [{ src: '~/plugins/ionic.js' }, { src: '~/plugins/capacitor.js' }],
+  plugins: [{ src: '~/plugins/capacitor.js' }, { src: '~/plugins/ionic.js' }],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
   components: true,
@@ -81,10 +80,12 @@ export default {
     }
   },
   robots: {
-    Sitemap: process.env.SITE_URL + 'sitemap.xml'
+    Sitemap:
+      (process.env.SITE_URL || 'https://nuxt-capacitor-app.vercel.app') +
+      '/sitemap.xml'
   },
   sitemap: {
-    hostname: process.env.SITE_URL,
+    hostname: process.env.SITE_URL || 'https://nuxt-capacitor-app.vercel.app',
     trailingSlash: true,
     routes: [
       {

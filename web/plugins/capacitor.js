@@ -1,6 +1,5 @@
-import { Plugins } from '@capacitor/core'
-
-const { Toast, Network } = Plugins
+import { Toast } from '@capacitor/toast'
+import { Network } from '@capacitor/network'
 
 export default function ({ app }, inject) {
   inject('toast', Toast)

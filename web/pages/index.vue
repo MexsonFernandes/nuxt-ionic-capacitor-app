@@ -3,6 +3,21 @@
     <ion-header>
       <ion-toolbar>
         <ion-title>Nuxt Ionic Capacitor Template</ion-title>
+        <ion-item>
+          <ion-label position="floating"
+            >Two Way Binding: {{ password }}</ion-label
+          >
+          <ion-input
+            ref="password"
+            type="text"
+            :value="password"
+            placeholder="••••••••••"
+            required="true"
+            floating
+            success
+            @input="password = $event.target.value"
+          ></ion-input>
+        </ion-item>
       </ion-toolbar>
     </ion-header>
 
@@ -37,7 +52,7 @@
 
       <ion-item @click="showToast">
         <ion-icon slot="start" :src="i.wine"></ion-icon>
-        <ion-label>Toast</ion-label>
+        <ion-label>Cap Toast</ion-label>
       </ion-item>
 
       <ion-item v-if="$store.state.installAvailable" @click="installApp">
@@ -46,28 +61,61 @@
       </ion-item>
     </ion-card>
 
-    <ion-fab slot="fixed" vertical="bottom" color="danger" horizontal="end">
+    <ion-fab
+      slot="fixed"
+      vertical="bottom"
+      horizontal="center"
+      color="secondary"
+    >
       <ion-fab-button>
-        <ion-icon :src="i.add"></ion-icon>
+        <ion-icon :icon="i.share"></ion-icon>
       </ion-fab-button>
+      <ion-fab-list side="top">
+        <ion-fab-button
+          ><ion-icon :icon="i.logoFacebook"></ion-icon
+        ></ion-fab-button>
+      </ion-fab-list>
+      <ion-fab-list side="start">
+        <ion-fab-button
+          ><ion-icon :icon="i.logoInstagram"></ion-icon
+        ></ion-fab-button>
+      </ion-fab-list>
+      <ion-fab-list side="end">
+        <ion-fab-button
+          ><ion-icon :icon="i.logoTwitter"></ion-icon
+        ></ion-fab-button>
+      </ion-fab-list>
     </ion-fab>
   </div>
 </template>
 
 <script>
-import { wifi, wine, download, add } from 'ionicons/icons'
+import {
+  wifi,
+  wine,
+  download,
+  add,
+  share,
+  logoFacebook,
+  logoInstagram,
+  logoTwitter
+} from 'ionicons/icons'
 
 export default {
-  components: {},
   data: () => {
     return {
-      networkStatus: '',
+      networkStatus: null,
       i: {
         wifi,
         wine,
         download,
-        add
-      }
+        add,
+        share,
+        logoTwitter,
+        logoInstagram,
+        logoFacebook
+      },
+      password: 'message'
     }
   },
   mounted() {
