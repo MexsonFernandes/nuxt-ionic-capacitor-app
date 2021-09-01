@@ -11,4 +11,4 @@ package/
 electron/
 android/app
 
-static/sw.js
+web/static/sw.js

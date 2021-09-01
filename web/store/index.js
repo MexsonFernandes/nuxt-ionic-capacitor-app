@@ -1,4 +1,4 @@
-import config from '../nuxt.config'
+import config from '../../nuxt.config'
 
 export const state = () => ({
   appVersion: process.env.version,
