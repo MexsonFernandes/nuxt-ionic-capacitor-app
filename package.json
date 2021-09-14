@@ -6,10 +6,9 @@
   "description": "A template of Nuxt, Ionic and Capacitor cross-platform app.",
   "scripts": {
     "dev": "nuxt",
-    "build": "nuxt build",
-    "build:prod": "nuxt build --prod",
     "start": "nuxt start",
     "generate": "nuxt generate",
+    "build": "yarn generate",
     "format": "pretty-quick",
     "lint": "./node_modules/.bin/eslint --ignore-path .eslintignore . --fix",
     "package:linux": "electron-packager electron/ nuxt-capacitor-app --platform linux --arch x64 --out package/ --overwrite",
