@@ -4,4 +4,4 @@ services:
   env: node
   plan: starter
   buildCommand: yarn; yarn generate
-  startCommand: yarn start
+  staticPublishPath: dist
