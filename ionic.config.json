@@ -1,7 +1,0 @@
-{
-  "name": "nuxt-ionic-cap",
-  "integrations": {
-    "capacitor": {}
-  },
-  "type": "vue"
-}
