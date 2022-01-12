@@ -6,7 +6,6 @@ A template code for starting cross platform apps developed using Nuxt.js and Cap
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https%3A%2F%2Fgithub.com%2FMexsonFernandes%2Fnuxt-capacitor-app)
 [![Deploy with Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https%3A%2F%2Fgithub.com%2FMexsonFernandes%2Fnuxt-capacitor-app)
-[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg?height=10px)](https://render.com/deploy?repo=https%3A%2F%2Fgithub.com%2FMexsonFernandes%2Fnuxt-capacitor-app)
 
 ## Features
 
@@ -47,9 +46,11 @@ Find deployment under `package/` folder.
 
 - Run following to create installer file.
 
-`yarn deb64`
+`npm install -g electron-installer-debian`
+
+`npm run deb64` or `yarn deb64`
 
 ## References
 
-- https://github.com/daggerok/ionic-nuxt-app
+- [Ionic Nuxt](https://github.com/daggerok/ionic-nuxt-app)
 - [ion icons in Nuxt project](https://yasminzy.com/nuxt/ionicons/)
