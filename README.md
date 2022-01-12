@@ -46,9 +46,11 @@ Find deployment under `package/` folder.
 
 - Run following to create installer file.
 
-`yarn deb64`
+`npm install -g electron-installer-debian`
+
+`npm run deb64` or `yarn deb64`
 
 ## References
 
-- https://github.com/daggerok/ionic-nuxt-app
+- [Ionic Nuxt](https://github.com/daggerok/ionic-nuxt-app)
 - [ion icons in Nuxt project](https://yasminzy.com/nuxt/ionicons/)
