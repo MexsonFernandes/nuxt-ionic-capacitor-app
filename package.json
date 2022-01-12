@@ -4,6 +4,9 @@
   "private": true,
   "author": "Mexson Fernandes",
   "description": "A template of Nuxt, Ionic and Capacitor cross-platform app.",
+  "engines": {
+    "node": ">=14"
+  },
   "scripts": {
     "dev": "nuxt",
     "start": "nuxt start",
@@ -41,7 +44,6 @@
     "@nuxtjs/eslint-module": "^3.0.2",
     "babel-eslint": "^10.1.0",
     "cordova-res-generator": "^0.4.2",
-    "electron-installer-debian": "^3.1.0",
     "electron-packager": "^15.1.0",
     "eslint": "^7.13.0",
     "eslint-config-prettier": "^6.12.0",
