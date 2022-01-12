@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: nuxt-ionic-capacitor-app
+    env: node
+    plan: starter
+    buildCommand: yarn; yarn generate
+    startCommand: yarn start
